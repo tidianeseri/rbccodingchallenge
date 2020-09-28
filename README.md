@@ -11,11 +11,11 @@ The project will run on port 5000
 Postman collection are available in the docs/ folder  
   
 ## Routes
-- POST http://localhost:5000/exchange/upload - Upload dataset
-  Pass zip file in form-data
-
-- POST http://localhost:5000/exchange/ - Add a new record
-  {
+- POST http://localhost:5000/exchange/upload - Upload dataset  
+  Pass zip file in form-data  
+  
+- POST http://localhost:5000/exchange/ - Add a new record  
+  `{
     "quarter": 1,
     "stock": "AB",
     "date": "2011-01-14T05:00:00.000Z",
@@ -32,8 +32,9 @@ Postman collection are available in the docs/ folder
     "percent_change_next_weeks_price": -2.47066,
     "days_to_next_dividend": 19,
     "percent_return_next_dividend": 0.187852
-}
-
-- GET  http://localhost:5000/exchange/ - Get all records
-
-- GET  http://localhost:5000/exchange/<TICKER> - Query for data by stock ticker
+}`  
+  
+- GET  http://localhost:5000/exchange/ - Get all records  
+  
+- GET  http://localhost:5000/exchange/<TICKER> - Query for data by stock ticker  
+  
