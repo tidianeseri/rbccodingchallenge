@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "653fe2ac-e0bf-4b6d-bf40-c12c183fef73",
+		"name": "RBC Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Data Set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"type": "file",
+							"src": "/home/chaikou/Downloads/dow_jones_index.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/exchange/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exchange",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query By Stock Ticker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exchange/aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exchange",
+						"aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quarter\": 1,\n    \"stock\": \"AA\",\n    \"date\": \"2011-01-14T05:00:00.000Z\",\n    \"open\": 16.71,\n    \"high\": 16.71,\n    \"low\": 15.64,\n    \"close\": 15.97,\n    \"volume\": 242963398,\n    \"percent_change_price\": -4.42849,\n    \"percent_change_volume_over_last_wk\": 1.380223028,\n    \"previous_weeks_volume\": 239655616,\n    \"next_weeks_open\": 16.19,\n    \"next_weeks_close\": 15.79,\n    \"percent_change_next_weeks_price\": -2.47066,\n    \"days_to_next_dividend\": 19,\n    \"percent_return_next_dividend\": 0.187852\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/exchange/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exchange",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/exchange/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"exchange",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
