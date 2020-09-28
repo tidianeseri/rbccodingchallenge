@@ -1,15 +1,15 @@
 # RBC Coding Challenge
 
 ## Usage
-`npm run dev` to run the project (typescript files)
-`npm run test` run the tests
-`npm run build` to build the project
-`npm start` to run the project (js compiled files)
-
-The project will run on port 5000
-
-Postman collection are available in the docs/ folder
-
+`npm run dev` to run the project (typescript files)  
+`npm run test` run the tests  
+`npm run build` to build the project  
+`npm start` to run the project (js compiled files)  
+  
+The project will run on port 5000  
+  
+Postman collection are available in the docs/ folder  
+  
 ## Routes
 - POST http://localhost:5000/exchange/upload - Upload dataset
   Pass zip file in form-data
